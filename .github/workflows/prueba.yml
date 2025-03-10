@@ -5,11 +5,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Descarga Codigo del Repositorio
-                uses: actions/checkout@v
-            - name: Instalar NodeJS
-                uses: actions/setup-node@v3
-                with:
-                    node-version: '18'
+                uses:
+                    actions/checkout@v4
+            - name:
+                Instalar NodeJS
+                    uses: actions/setup-node@v3
+                    with:
+                        node-version: '18'
             - name: Instalar Dependecias
                 run: npm ci
             - name: Ejecutar pruebas
