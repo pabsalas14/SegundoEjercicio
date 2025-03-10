@@ -15,6 +15,7 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test
   despliegue:
+    needs: prueba
     runs-on: ubuntu-latest
     steps:
       - name: Descarga Codigo del Repositorio
